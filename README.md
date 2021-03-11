@@ -44,7 +44,15 @@
 
 #### React Capabilities
 ##### React Router
+- Similar to express, in the path you can assign param variables with `:VARNAME`
 ##### Class Components
+- `class Foo extends React.Component`
+  - `constructor`
+    - `super()` is **required**, to call the `Contructor` class defined by React.
+  - `this` is the object build by the class
+- In functional components (what we've written up to this point), most of the "Lifecycle methods" have been wrapped into `useEffect`.
+-
+
 ##### Class Properties
 ##### Managing State in Class Components
 #### Special Case React Tools
