@@ -51,10 +51,11 @@
     - `super()` is **required**, to call the `Contructor` class defined by React.
   - `this` is the object build by the class
 - In functional components (what we've written up to this point), most of the "Lifecycle methods" have been wrapped into `useEffect`.
--
 
 ##### Class Properties
 ##### Managing State in Class Components
+- [defaultProps](https://blog.logrocket.com/a-complete-guide-to-default-props-in-react-984ea8e6972d/)
+- Arrow functions are bound to `this`, so there will be no need to specify with a `bind()` statement.
 #### Special Case React Tools
 ##### Error Boundaries
 ##### Context

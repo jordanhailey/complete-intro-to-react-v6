@@ -19,7 +19,7 @@ class Details extends Component {
       return <h2>loading...</h2>
     }
 
-    const {animal, breed, name, city, state, id, description, images } = this.state;
+    const {animal, breed, name, city, state, description, images } = this.state;
     return (
       <div className="details">
         <Carousel images={images}/>
