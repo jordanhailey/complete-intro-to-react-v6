@@ -1,0 +1,7 @@
+dist/
+coverage/
+.vscode/
+node_modules
+.env
+.cache
+.DS_Store
