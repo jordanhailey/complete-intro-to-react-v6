@@ -1,0 +1,12 @@
+{
+  "name": "complete-intro-to-react-v6",
+  "version": "0.0.1",
+  "description": "Complete Intro To React v6, Frontend Masters Workshop, 2021-03-11",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
