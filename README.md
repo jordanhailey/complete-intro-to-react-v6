@@ -22,5 +22,22 @@
   ```
   > NOTE: `prettier` must come last in the `extends` array.
 - To make an implicit return in JSX, wrap your return component in '()',
-  - cannot return multiple children, must return one component, so if multiple elements, wrap in `<> empty tags </>`
--
+  - cannot return multiple children, must return one component, so if multiple elements, wrap in `<> fragments </>`
+
+### Effects
+- For async functions, and other things you might need to do upon rendering or re-rendering your app
+
+### Custom Hooks
+- Custom Hooks use built in Hooks, its important to remember you cannot break the nested state rules on anything inside custom hooks. If using state in your custom hook, is needs to be top level, not wrapped in a loop / conditional, or custom function.
+### Handling User Events
+- [Supported Synthetic events](https://reactjs.org/docs/events.html#supported-events)
+
+### Component Composition
+- Think small, but not too small that your code becomes hard to read / reason on.
+
+### React Dev Tools
+- Be sure to utilize NODE_ENV for development and production builds. A lot of extra weight is stripped out at build time (e.g. drops weight from debugger) when using a production env.
+- `<StrictMode>` will give extra warnings for legacy features or soon to be deprecated features.
+- Download the extension for Chromium/Firefox browsers for exploring a running React app from the Browser.
+
+### React Router
