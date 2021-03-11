@@ -1,1 +1,1 @@
-/Users/jordanhailey/MEMEX/dev/references/20210311144056.md
+../../../../MEMEX/dev/references/20210311144056.md
