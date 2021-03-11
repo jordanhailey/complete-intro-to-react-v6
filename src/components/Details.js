@@ -19,7 +19,20 @@ class Details extends Component {
   }
 
   render() {
-    return (<pre>{JSON.stringify(this.state,null,2)}</pre>);
+    if (this.state.loading) {
+      return <h2>loading...</h2>
+    }
+
+    const {animal, breed, name, city, state, id, description, images } = this.state;
+    return (
+      <div className="details">
+        <h1>{name}</h1>
+        <h2>{`${animal} - ${breed} - ${city}, ${state}`}</h2>
+        <button>Adopt {name}</button>
+        <p>{description}</p>
+        <pre>{JSON.stringify(this.state,null,2)}</pre>
+      </div>
+    );
   }
 }
 
