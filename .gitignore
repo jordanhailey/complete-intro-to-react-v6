@@ -1,4 +1,5 @@
 dist/
+dist-server/
 coverage/
 .vscode/
 node_modules
