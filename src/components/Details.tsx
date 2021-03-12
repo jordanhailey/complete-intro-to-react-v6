@@ -1,17 +1,29 @@
 import { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 import ThemeContext from './ThemeContext';
 import Carousel from './Carousel';
 import ErrorBoundary from "./ErrorBoundary";
 import Modal from './Modal';
-class Details extends Component {
-  state = {loading:true, showModal: false}
+import { PetAPIResponse, Animal } from '../APIResponseTypes'
+
+class Details extends Component<RouteComponentProps<{id: string}>> { // nested generics
+  state = {
+    loading:true,
+    showModal: false,
+    animal: "" as Animal,
+    breed: "",
+    city: "",
+    state: "",
+    description: "",
+    name: "",
+    images: [] as string[]
+  };
 
   async componentDidMount () {
     const res = await fetch(
       `http://pets-v2.dev-apis.com/pets?id=${this.props.match.params.id}`
     );
-    const json = await res.json();
+    const json = (await res.json()) as PetAPIResponse; // Casting of Type PetAPIResponse https://www.typescripttutorial.net/typescript-tutorial/type-casting/
     this.setState(Object.assign({
       loading: false
     }, json.pets[0]))
@@ -20,7 +32,7 @@ class Details extends Component {
   toggleModal = () => {
     this.setState({showModal: !this.state.showModal});
   }
-  adopt = () => (window.location = "http://bit.ly/pet-adopt")
+  adopt = () => (window.location.href = "http://bit.ly/pet-adopt")
 
   render() {
     if (this.state.loading) {
