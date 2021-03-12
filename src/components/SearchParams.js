@@ -28,7 +28,7 @@ const SearchParams = () => {
     setPets(json.pets);
   }
   return (
-    <div className="search-params">
+    <div>
       <form
         onSubmit={(e)=>{
           e.preventDefault();
