@@ -73,10 +73,10 @@ class Details extends Component<RouteComponentProps<{id: string}>> { // nested g
 
 const DetailsWithRouter = withRouter(Details);
 
-export default function DetailsErrorBoundary(props) {
+export default function DetailsErrorBoundary() {
   return (
     <ErrorBoundary>
-      <DetailsWithRouter {...props} />
+      <DetailsWithRouter />
     </ErrorBoundary>
   );
 }
