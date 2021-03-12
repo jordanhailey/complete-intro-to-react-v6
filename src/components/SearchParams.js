@@ -36,13 +36,20 @@ const SearchParams = () => {
           requestPets();
         }}
       >
-        <label htmlFor="location">
+        <label
+          className="search-label"
+          htmlFor="location"
+        >
           Location
-          <input id="location" value={location} placeholder="Location" onChange={(e)=>{setLocation(e.target.value)}}/>
+          <input className="search-control" id="location" value={location} placeholder="Location" onChange={(e)=>{setLocation(e.target.value)}}/>
         </label>
-        <label htmlFor="animal">
+        <label
+          className="search-label"
+          htmlFor="animal"
+        >
           Animal
           <select
+            className="search-control"
             defaultValue='default'
             id="animal"
             onChange={(e)=>{setAnimal(e.target.value)}}
@@ -56,9 +63,13 @@ const SearchParams = () => {
             ))}
           </select>
         </label>
-        <label htmlFor="breed">
+        <label
+          className="search-label"
+          htmlFor="breed"
+        >
           Breed
           <select
+            className="search-control disabled:opacity-50"
             disabled={!breeds.length}
             defaultValue='default'
             id="breed"
@@ -73,20 +84,24 @@ const SearchParams = () => {
             ))}
           </select>
         </label>
-        <label htmlFor="theme">
+        <label
+          className="search-label"
+          htmlFor="theme"
+        >
           Theme
           <select
+            className="search-control"
             value={theme}
             onChange={(e) => setTheme(e.target.value)}
             onBlur={(e) => setTheme(e.target.value)}
           >
-            <option value="peru">Peru</option>
-            <option value="darkblue">Dark Blue</option>
-            <option value="chartreuse">Chartreuse</option>
-            <option value="mediumorchid">Medium Orchid</option>
+            <option key="peru" value="peru">Peru</option>
+            <option key="darkblue" value="darkblue">Dark Blue</option>
+            <option key="chartreuse" value="chartreuse">Chartreuse</option>
+            <option key="mediumorchid" value="mediumorchid">Medium Orchid</option>
           </select>
         </label>
-        <button style={{ backgroundColor: theme }}>Submit</button>
+        <button className="rounded px-6 py-2 text-white hover:opacity-50 border-none" style={{ backgroundColor: theme }}>Submit</button>
       </form>
       <Results pets={pets} />
     </div>
