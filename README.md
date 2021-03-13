@@ -3,8 +3,39 @@
 >
 > [Brian's repo](https://github.com/btholt/citr-v6-project), his [notes](https://btholt.github.io/complete-intro-to-react-v6/)
 
+## Table of Contents
+- [Lessons Learned](#lessons-learned)
+- Raw Notes from the Workshop
+  - [Intro to React v6](#intro-to-react-v6)
+  - [Intermediate React v3](#intermediate-react-v3)
+
+## Lessons Learned
+- [ ] Review notes and add takeaways
+
+
+***
 ## Raw Notes
 ### Intro to React v6
+- Table of Contents
+  - [Setup](#setup)
+  - [Core React Concepts](#core-react-concepts)
+  	- [Hooks](#hooks)
+  	- [Effects](#effects)
+  	- [Custom Hooks](#custom-hooks)
+  	- [Handling User Events](#handling-user-events)
+  	- [Component Composition](#component-composition)
+  	- [React Dev Tools](#react-dev-tools)
+  - [React Capabilities](#react-capabilities)
+  	- [React Router](#react-router)
+  	- [Class Components](#class-components)
+  	- [Class Properties](#class-properties)
+  	- [Managing State in Class Components](#managing-state-in-class-components)
+  - [Special Case React Tools](#special-case-react-tools)
+  	- [Error Boundaries](#error-boundaries)
+  	- [Context](#context)
+  	- [Portals and Refs](#portals-and-refs)
+  - [Wrapping Up](#wrapping-up)
+***
 #### Setup
 - Setting up Brian's repo as a submodule, changed the remote name from origin to upstream, in case I wish to edit the repo and push the changes to my GitHub.
 - I started about 2 hours late, missed the intro, came in when discussing tooling, will work from the beginning during the lunch break to get caught up.
@@ -71,6 +102,42 @@
 
 ***
 ### Intermediate React v3
+- Table of Contents
+  - [Hooks in Depth](#hooks-in-depth)
+  	- [useState](#usestate)
+  	- [useEffect](#useeffect)
+  	- [useContext](#usecontext)
+  	- [useRef](#useref)
+  	- [useReducer](#usereducer)
+  	- [useMemo](#usememo)
+  	- [useCallback](#usecallback)
+  	- [useLayoutEffect](#uselayouteffect)
+  	- [useImperativeHandle](#useimperativehandle)
+  	- [useDebugValue](#usedebugvalue)
+  - [TailwindCSS](#tailwindcss)
+  	- [CSS and React](#css-and-react)
+  	- [Tailwind Basics](#tailwind-basics)
+  	- [Tailwind Plugins](#tailwind-plugins)
+  	- [Grid and Breakpoints](#grid-and-breakpoints)
+  	- [Positioning](#positioning)
+  - [Code Splitting](#code-splitting)
+  - [Server Side Rendering](#server-side-rendering)
+  - [TypeScript](#typescript)
+  - [Redux](#redux)
+  	- [Reducers](#reducers)
+  	- [Action Creators](#action-creators)
+  	- [Providers](#providers)
+  	- [Dispatching Actions](#dispatching-actions)
+  	- [Redux Dev Tools](#redux-dev-tools)
+  - [Testing](#testing)
+  	- [Basic React Testing](#basic-react-testing)
+  	- [Testing UI Interactions](#testing-ui-interactions)
+  	- [Testing Custom Hooks](#testing-custom-hooks)
+  	- [Mocks](#mocks)
+  	- [Snapshots](#snapshots)
+  	- [Istanbul](#istanbul)
+  - [Wrapping Up](#wrapping-up-1)
+***
 #### Hooks in Depth
 > https://codesandbox.io/s/github/btholt/react-hooks-examples-v3/
 
@@ -129,7 +196,7 @@
 	-  `npx tailwindcss init --full` populates tailwind.config.js with all the defaults, if you want them.
 ##### Tailwind Basics
 - #til a clearer definition of `rem` ...
-	- "root m" => width of the m character at root (html document) 
+	- "root m" => width of the m character at root (html document)
 
 ##### Tailwind Plugins
 - Some plugins available from the tailwind team, eg for form styling
@@ -159,11 +226,11 @@
 - TS doesn't like `null`
 - Generics are catered towards things like APIs
 - Types vs Interface
-	- Type: 
+	- Type:
 	- Interface: when you can use an interface, use an interface...
 
 #### Redux
-- Created by Dan Abramov 
+- Created by Dan Abramov
 - Redux came as a solution to the problems that using React with Flux presented.
 - useContext and useReducer have vastly improved the state of React's state management
 - Redux is very testable, big benefit of using it. Using `useReducer` also simplifies testing.
