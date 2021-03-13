@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with no pets 1`] = `
+<div
+  className="search"
+>
+  <h2>
+    No Pets Found
+  </h2>
+</div>
+`;
