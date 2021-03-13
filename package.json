@@ -42,5 +42,8 @@
   },
   "browserslist": [
     "last 2 Chrome versions"
-  ]
+  ],
+  "jest": {
+    "testPathIgnorePatterns": ["/node_modules/", "/solution/"]
+  }
 }
